@@ -5,12 +5,15 @@
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
+    "postinstall": "./scripts/sibcore-aliases",
     "test": "./node_modules/.bin/mocha test/** --recursive",
     "build-deb": "./scripts/build-deb"
   },
   "bin": {
     "bitcore": "./bin/bitcore",
-    "bitcored": "./bin/bitcored"
+    "bitcored": "./bin/bitcored",
+    "sibcore": "./bin/sibcore",
+    "sibcored": "./bin/sibcored"
   },
   "contributors": [
     {
@@ -82,10 +85,10 @@
     "request": "browser-request"
   },
   "dependencies": {
-    "bitcore-lib-dash": "^0.13.20",
-    "bitcore-node-dash": "~3.0.4",
-    "insight-api-dash": "^0.4.5",
-    "insight-ui-dash": "^0.4.3"
+    "bitcore-lib-dash": "git+https://git@github.com:Sibcoin-developers/bitcore-lib-dash.git",
+    "bitcore-node-dash": "git+https://git@github.com:Sibcoin-developers/bitcore-node-dash.git",
+    "insight-api-dash": "git+https://git@github.com:Sibcoin-developers/insight-api-dash.git",
+    "insight-ui-dash": "git+https://git@github.com:Sibcoin-developers/insight-ui-dash.git"
   },
   "license": "MIT",
   "devDependencies": {

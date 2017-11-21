@@ -1,0 +1,29 @@
+#!/bin/bash
+
+
+set -e
+
+if [ ! -f $0 ]; then
+  echo "Error: Path not found!\n"
+  exit 2
+fi
+
+path_f=`readlink -e "$0"`
+path_d=`dirname "$path_f"`
+path_r=`dirname "$path_d"`
+
+ln -sfr ${path_r}/bin/bitcore ${path_r}/bin/sibcore
+ln -sfr ${path_r}/bin/bitcored ${path_r}/bin/sibcored
+
+# temp hack, need fix dependencies
+if [ -d ${path_r}/node_modules/insight-api-dash/node_modules/bitcore-lib-dash ]; then
+  rm -r ${path_r}/node_modules/insight-api-dash/node_modules/bitcore-lib-dash
+fi
+if [ -d ${path_r}/node_modules/bitcore-node-dash/node_modules/bitcore-lib-dash ]; then
+  rm -r ${path_r}/node_modules/bitcore-node-dash/node_modules/bitcore-lib-dash
+fi
+if [ -d ${path_r}/node_modules/insight-api-dash/node_modules/bitcore-message-dash/node_modules/bitcore-lib-dash ]; then
+  rm -r ${path_r}/node_modules/insight-api-dash/node_modules/bitcore-message-dash/node_modules/bitcore-lib-dash
+fi
+
+echo -e "Aliases sibcore, sibcored is created!\n"
