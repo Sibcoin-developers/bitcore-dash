@@ -85,10 +85,10 @@
     "request": "browser-request"
   },
   "dependencies": {
-    "bitcore-lib-dash": "git+https://git@github.com:Sibcoin-developers/bitcore-lib-dash.git",
-    "bitcore-node-dash": "git+https://git@github.com:Sibcoin-developers/bitcore-node-dash.git",
-    "insight-api-dash": "git+https://git@github.com:Sibcoin-developers/insight-api-dash.git",
-    "insight-ui-dash": "git+https://git@github.com:Sibcoin-developers/insight-ui-dash.git"
+    "bitcore-lib-dash": "git+https://github.com/Sibcoin-developers/bitcore-lib-dash.git",
+    "bitcore-node-dash": "git+https://github.com/Sibcoin-developers/bitcore-node-dash.git",
+    "insight-api-dash": "git+https://github.com/Sibcoin-developers/insight-api-dash.git",
+    "insight-ui-dash": "git+https://github.com/Sibcoin-developers/insight-ui-dash.git"
   },
   "license": "MIT",
   "devDependencies": {
